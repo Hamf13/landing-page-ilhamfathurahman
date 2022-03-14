@@ -1,6 +1,8 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
 }
 
@@ -9,46 +11,56 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+/* section{
+  padding: 2rem;
+} */
+
 /* navbar */
-
-.header .logo img{
-  height: 6rem;
-}
-
-.header .navbar a{
-  margin: 0 1rem;
-  font-size: 1.6rem;
-  text-decoration: none;
-}
-
-.header .navbar a:hover{
-  color: black;
-  border-bottom: 10px  inherit white;
-}
-
-.navbar {
-  /* background: rgb(158, 56, 9); */
-  background: white;
-  height: 85px;
+nav{
   display: flex;
-  padding: 0px 10%;
+  justify-content: space-around;
+  background-color: salmon;
+  /* padding: 20px 0; */
+  color: black;
+  height: 50px;
   align-items: center;
+}
+
+nav .logo img{
+  letter-spacing: 3px;
+}
+
+nav ul{
+  display: flex;
+  padding: 20px 0;
+  width: 40%;
   justify-content: space-between;
-  box-shadow: 0 2px 4px 0 rgba(1, 1, 1, 0.1);
-  font-size: 18px;
 }
 
-.navbar a{
-    font-size: 25px;
-    font-weight: bolder;
+nav ul li a{
+color: black;
+font-size: 1rem;
 }
 
-.nav-menu{
-    display:flex ;
-    gap: 30px;
+nav ul li a:hover{
+  color: white;
 }
 
-/* container */
+/* responsive breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+  nav ul{
+    width: 50%;
+  }
+}
+
+/* ukuran mobile */
+@media screen and (max-width:576px) {
+  nav ul{
+    display: none;
+  }
+}
 
 /* section 1 */
 .hero-container{
