@@ -9,7 +9,7 @@
 body {
   overflow-x: hidden;
   font-family: "Rubik", sans-serif;
-  background-color: brown;
+  background-color:rgb(161, 76, 50);
 }
 
 section{
@@ -33,23 +33,26 @@ section{
     margin-top: 1rem;
     display: inline-block;
     padding: 0.9rem 3rem;
-    font-size: 1.7rem;
+    font-size: 1rem;
     color: #fff;
     background:#d3ad7f ;
     cursor: pointer;
 }
 
-
+.btn:hover{
+  color: black;
+}
 
 /* navbar */
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: salmon;
+  background-color:rgb(161, 76, 50);
   color: black;
   height: 50px;
   align-items: center;
   margin: auto;
+  box-shadow: 0 2px 4px 5px rgba(1, 1, 1, 0.1);
 }
 nav .logo {
   margin: 20px;
@@ -142,7 +145,7 @@ nav ul li a:hover {
 }
 
 .home .content h3{
-  font-size: 6rem;
+  font-size: 5rem;
   text-transform: uppercase;
   color: black;
 }
@@ -162,10 +165,11 @@ nav ul li a:hover {
   align-items: center;
   background:black;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .about .row .image{
-  flex:1 1 45rem;
+  flex:1 1 30rem;
   padding: 2rem;
 }
 
@@ -173,17 +177,17 @@ nav ul li a:hover {
   width: 100%;
 }
 .about .row .content{
-  flex:1 1 45rem;
+  flex:1 1 30rem;
   padding: 2rem;
 }
 
 .about .row .content h3{
-  font-size: 4rem;
+  font-size: 3rem;
   color:#fff;
 }
 
 .about .row .content p{
-  font-size: 1.6rem;
+  font-size: 1rem;
   color:#ccc;
   padding:1rem 0;
   line-height: 1.8;
@@ -214,7 +218,7 @@ nav ul li a:hover {
 
 .menu .box-container .box .price{
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding:.5rem 0;
 }
 
@@ -232,6 +236,108 @@ nav ul li a:hover {
   color: black;
 }
 
+/* review */
+
+.review .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap:1rem;
+}
+
+.review .box-container .box{
+  border:.1rem solid rgba(255,255,255,.3);
+  text-align: center;
+  padding:3rem 2rem;
+}
+
+.review .box-container .box p{
+  font-size: 1rem;
+  line-height: 1.8;
+  color:#ccc;
+  padding:2rem 0;
+}
+
+.review .box-container .box .user{
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review .box-container .box h3{
+  padding:1rem 0;
+  font-size: 2rem;
+  color:#fff;
+}
+
+/* contact */
+
+.contact .row{
+  display: flex;
+  background:black;
+  flex-wrap: wrap;
+  gap:1rem;
+}
+
+.contact .row .map{
+  flex:1 1 35rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form{
+  flex:1 1 35rem;
+  padding:5rem 1rem;
+  text-align: center;
+}
+
+.contact .row form h3{
+  text-transform: uppercase;
+  font-size: 2rem;
+  color:#fff;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  background:#010103;
+  border:.1rem solid rgba(255,255,255,.3);
+}
+
+
+.contact .row form .inputBox input{
+  width: 100%;
+  padding:10px;
+  font-size: 1rem;
+  color:#fff;
+  text-transform: none;
+  background:none;
+  border: none;
+}
+
+/* footer */
+
+.footer{
+  background:brown;
+  text-align: center;
+}
+
+.footer .share a{
+  padding:1rem 1rem;
+}
+
+
+.footer .credit{
+  font-size: 1rem;
+  color:#fff;
+  font-weight: lighter;
+  padding:1.5rem;
+}
+
+.footer .credit span{
+  color:#d3ad7f;
+}
 
 /* responsive breakpoint */
 
@@ -239,6 +345,19 @@ nav ul li a:hover {
 @media screen and (max-width: 768px) {
   nav ul {
     width: 50%;
+  }
+  .home{
+    background-position: left;
+    justify-content: center;
+     text-align: center;
+  }
+
+  .home .content h3{
+    font-size: 4rem;
+  }
+
+  .home .content p{
+    font-size: 1rem;
   }
 }
 
@@ -253,7 +372,7 @@ nav ul li a:hover {
    top: 0;
    width: 80%;
    height: 100vh;
-   justify-content: space-evenly;
+   justify-content:space-evenly;
    flex-direction: column;
    align-items: center;
    background-color: beige;
@@ -268,18 +387,12 @@ nav ul li a:hover {
     transform: translateX(0);
   }
 
-
-  .home{
-    background-position: left;
-    justify-content: center;
-     text-align: center;
+  html{
+    font-size: 70%;
   }
 
-  .home .content h3{
-    font-size: 4.5rem;
-  }
-
-  .home .content p{
-    font-size: 1.5rem;
+  .about .row {
+    font-size: 55%;
+    flex:1 1 30rem;
   }
 }
