@@ -78,7 +78,7 @@ nav ul {
 
 nav ul li a {
   color: black;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 nav ul li a:hover {
@@ -398,6 +398,7 @@ nav ul li a:hover {
     transform: translateX(100%);
     transition: all 1s;
     opacity: 0;
+    font-size: 1.5rem
   }
 
   nav ul.slide {
@@ -406,7 +407,7 @@ nav ul li a:hover {
   }
 
   html {
-    font-size: 60%;
+    font-size: 65%;
   }
 
   .about .row {
